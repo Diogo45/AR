@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="Indicador" size="0.040000 0.016865" />
+    <ImageTarget name="Dedao" size="0.040000 0.011473" />
+    <ImageTarget name="Joker" size="0.055000 0.086276" />
+    <ImageTarget name="10Espada" size="0.055000 0.083609" />
+    <ImageTarget name="10Paus" size="0.055000 0.083284" />
+    <ImageTarget name="Copag" size="0.055000 0.084303" />
+    <ImageTarget name="RainhaCopas" size="0.055000 0.085458" />
+    <ImageTarget name="valete" size="0.055000 0.084265" />
+    <ImageTarget name="Test" size="0.055000 0.085187" />
+  </Tracking>
+</QCARConfig>
