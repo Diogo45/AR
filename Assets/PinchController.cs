@@ -27,9 +27,18 @@ public class PinchController : MonoBehaviour
         dedaoTracker = Dedao.transform.parent.GetComponent<Vuforia.ImageTargetBehaviour>();
     }
 
+    private void OnDrawGizmos()
+    {
+        if (gameState && gameState.Pinch)
+        {
+            Gizmos.DrawCube((Indicador.transform.position + Dedao.transform.position) / 2f, Vector3.one / 40f);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
+        //TODO: Tratar quando se perde o trackig do dedo enquanto carregando
         if (indicadorTracker.CurrentStatus != Vuforia.TrackableBehaviour.Status.TRACKED || dedaoTracker.CurrentStatus != Vuforia.TrackableBehaviour.Status.TRACKED)
         {
             //Debug.Log("FINGER NOT TRACKED \n RE-TRACK");
@@ -50,23 +59,38 @@ public class PinchController : MonoBehaviour
 
         if (gameState.Pinch && !gameState.CarryingObject)
         {
-            Collider[] col = Physics.OverlapSphere((Indicador.transform.position + Dedao.transform.position) / 2f, 0.5f);
+
+           
+            Collider[] col = Physics.OverlapSphere((Indicador.transform.position + Dedao.transform.position) / 2f, 0.025f);
             if (col.Length > 0)
             {
-                Debug.Log("WOLOLO " + col[0].gameObject.name);
-                col[0].transform.parent = Indicador.transform;
-                gameState.CarryingObject = true;
+                //col[0].transform.parent = Indicador.transform;
+                for (int i = 0; i < col.Length; i++)
+                {
+                    bool keepGoing = col[i].gameObject.TryGetComponent(out PinchableObject pinchable);
+                    if (!keepGoing) continue;
+                    Debug.Log("WOLOLO " + col[i].gameObject.name);
+                    pinchable.pinched = true;
+                    pinchable.pincerOne = Indicador;
+                    pinchable.pincerTwo = Dedao;
+                    gameState.CarryingObject = true;
+                }
             }
         }
-        //else if(!gameState.Pinch && gameState.CarryingObject)
-        //{
-        //    Collider[] col = Physics.OverlapSphere((Indicador.transform.position + Dedao.transform.position) / 2f, 0.5f);
-        //    if (col.Length > 0)
-        //    {
-        //        col[0].transform.parent = null;
-        //        gameState.CarryingObject = false;
-        //    }
-        //}
+        else if (!gameState.Pinch && gameState.CarryingObject)
+        {
+            Collider[] col = Physics.OverlapSphere((Indicador.transform.position + Dedao.transform.position) / 2f, 0.025f);
+            for (int i = 0; i < col.Length; i++)
+            {
+                bool keepGoing = col[i].gameObject.TryGetComponent(out PinchableObject pinchable);
+                if (!keepGoing || !pinchable.pinched) continue;
+                Debug.Log("NOLOLO" + col[i].gameObject.name);
+                pinchable.pinched = false;
+                pinchable.pincerOne = null;
+                pinchable.pincerTwo = null;
+                gameState.CarryingObject = false;
+            }
+        }
 
     }
 }

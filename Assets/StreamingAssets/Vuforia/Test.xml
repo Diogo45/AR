@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
-    <ImageTarget name="IndicadorQR3" size="0.055000 0.054292" />
-    <ImageTarget name="IndicadorQR2" size="0.055000 0.014687" />
-    <ImageTarget name="DedaoQR3" size="0.055000 0.054522" />
-    <ImageTarget name="DedaoQR2" size="0.055000 0.022378" />
-    <ImageTarget name="DedaoQR" size="0.055000 0.012765" />
+    <ImageTarget name="IndicadorQR2" size="0.070000 0.031446" />
+    <ImageTarget name="DedaoQR2" size="0.065000 0.026447" />
+    <ImageTarget name="Copag" size="0.055000 0.087291" />
+    <ImageTarget name="RainhaPaus" size="0.055000 0.088237" />
+    <ImageTarget name="ReiDiamante" size="0.055000 0.086631" />
+    <ImageTarget name="9Espadas" size="0.055000 0.084886" />
+    <ImageTarget name="7Paus" size="0.055000 0.086793" />
+    <ImageTarget name="5Paus" size="0.055000 0.086170" />
+    <ImageTarget name="10Espadas" size="0.055000 0.085264" />
+    <ImageTarget name="10Paus" size="0.055000 0.081406" />
+    <ImageTarget name="4Espadas" size="0.055000 0.035394" />
+    <ImageTarget name="DedaoQR" size="0.055000 0.022378" />
     <ImageTarget name="IndicadorQR" size="0.055000 0.024708" />
-    <ImageTarget name="MarcadorQuatro" size="0.055000 0.018046" />
-    <ImageTarget name="MarcadorDois" size="0.055000 0.021074" />
-    <ImageTarget name="Indicador" size="0.040000 0.016865" />
-    <ImageTarget name="Dedao" size="0.040000 0.011473" />
     <ImageTarget name="Joker" size="0.055000 0.086276" />
-    <ImageTarget name="10Espada" size="0.055000 0.083609" />
-    <ImageTarget name="10Paus" size="0.055000 0.083284" />
-    <ImageTarget name="Copag" size="0.055000 0.084303" />
-    <ImageTarget name="RainhaCopas" size="0.055000 0.085458" />
-    <ImageTarget name="valete" size="0.055000 0.084265" />
-    <ImageTarget name="Test" size="0.055000 0.085187" />
   </Tracking>
 </QCARConfig>
