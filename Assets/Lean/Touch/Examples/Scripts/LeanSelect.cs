@@ -127,6 +127,7 @@ namespace Lean.Touch
 
 						if (Physics.Raycast(ray, out hit, float.PositiveInfinity, LayerMask) == true)
 						{
+                                Debug.Log("acertou");
 							component = hit.collider;
 						}
 					}
