@@ -38,10 +38,6 @@ public class ThrowableObject : MonoBehaviour
             rBody.isKinematic = true;
         }
 
-        if(gameObject.transform.position.y < 0f)
-        {
-            //gameObject.transform.localPosition = originalPos;
-        }
         
 
         wasPinchedLastFrame = pBody.pinched;

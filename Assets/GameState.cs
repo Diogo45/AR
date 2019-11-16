@@ -14,6 +14,8 @@ public class GameState : MonoBehaviour
 
     public string carriedGameObject = "";
 
+    public GameObject ground;
+
     private void Awake()
     {
         if (!inst)
