@@ -74,6 +74,8 @@ public class PinchController : MonoBehaviour
                     pinchable.pincerOne = Indicador;
                     pinchable.pincerTwo = Dedao;
                     gameState.CarryingObject = true;
+                    gameState.carriedGameObject = col[i].gameObject.name;
+                    break;
                 }
             }
         }
@@ -89,6 +91,9 @@ public class PinchController : MonoBehaviour
                 pinchable.pincerOne = null;
                 pinchable.pincerTwo = null;
                 gameState.CarryingObject = false;
+                gameState.carriedGameObject = "";
+                break;
+
             }
         }
 

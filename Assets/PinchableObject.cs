@@ -9,6 +9,7 @@ public class PinchableObject : MonoBehaviour
     public GameObject pincerTwo;
 
     public bool pinched = false;
+
         
     // Update is called once per frame
     void Update()

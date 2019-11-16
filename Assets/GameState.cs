@@ -12,7 +12,7 @@ public class GameState : MonoBehaviour
     public bool Pinch = false;
     public bool CarryingObject = false;
 
-
+    public string carriedGameObject = "";
 
     private void Awake()
     {
