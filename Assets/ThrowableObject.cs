@@ -30,7 +30,7 @@ public class ThrowableObject : MonoBehaviour
         {
             rBody.isKinematic = false;
             //rBody.useGravity = false;
-            rBody.angularVelocity += Camera.main.gameObject.transform.forward;
+            rBody.angularVelocity += Camera.main.gameObject.transform.forward*2;
             rBody.velocity += Camera.main.gameObject.transform.forward;
         }
         else if (pBody.pinched)
