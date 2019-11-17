@@ -44,9 +44,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/SamplesResources/Scenes/3-VuMarks.unity
     guid: d9b53b25a285640cf8ac170a80603e34
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/TouchScene.unity
+    guid: f72c21dbee6b8484f945414d86dbb978
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 82f4d3a41ae617f4da471c86c757be97,
       type: 2}
