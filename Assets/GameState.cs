@@ -19,6 +19,8 @@ public class GameState : MonoBehaviour
 
     public GameObject ground;
 
+    public int CurrentState = 0;
+
     //private bool spawned = false;
 
     private void Awake()
