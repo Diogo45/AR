@@ -16,7 +16,6 @@ public class ObjectSpawner : DefaultTrackableEventHandler
             Instantiate(objPrefab, gameObject.transform.position, Quaternion.identity);
             instantiated = true;
         }
-        Debug.Log("AAAAAAAAA");
     }
 
 }
